@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Navigation" />
+    <meta name="keywords" content="HTML,CSS,JS" />
+    <meta name="author" content="Roxi Stan" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Navigation</title>
+    <link rel="stylesheet" type="text/css" href="resources/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <span>Free shipping on orders over $250</span>
+      </header>
+
+      <div class="container">
+        <aside>
+          <div class="title-aside hidden">
+            <img src="assets/logo-boundary.png" alt="logo-boundary" />
+          </div>
+
+          <div class="logo-menu">
+            <div class="content order-details your-orders-container">
+              <img src="assets/logo-vip.png" alt="logo-vip" />
+            </div>
+            <div class="content hidden reward-status-container">
+              <img src="assets/logo-gold.png" alt="logo-gold" />
+            </div>
+            <div class="content hidden account-settings-container">
+              <img src="assets/logo-elite.png" alt="logo-elite" />
+            </div>
+            <div class="content hidden payment-methods-container">
+              <img src="assets/logo-member.png" alt="logo-member" />
+            </div>
+          </div>
+
+          <div class="menu-left">
+            <a class="menu-item selected" data-content="your-orders-container">Your Orders</a>
+            <a class="menu-item" data-content="reward-status-container">Reward Status</a>
+            <a class="menu-item" data-content="account-settings-container">Account Settings</a>
+            <a class="menu-item" data-content="payment-methods-container">Payment Methods</a>
+            <a data-content="sign-out-container">Sign Out</a>
+          </div>
+        </aside>
+
+        <section>
+          <nav>
+            <div class="menu-top hidden">
+              <span>Shop</span>
+              <img src="assets/icon-find.png" alt="icon-find" />
+              <img src="assets/icon-cart-2.png" alt="icon-cart-2" />
+              <img src="assets/icon-exit-3.png" alt="icon-exit-3" />
+            </div>
+          </nav>
+
+          <!-- Your orders -->
+          <div class="content your-orders-container">
+            <div class="title-your-orders">
+              <h1>Your</h1>
+              <h1>Orders</h1>
+            </div>
+
+            <div class="product">
+              <div class="product-box">
+                <img src="assets/product-1/product.png" alt="product" />
+              </div>
+
+              <div class="your-order-details">
+                <div class="top-your-order">
+                  <div>
+                    <span>April 1, 2019</span>
+                    <span
+                      id="orderDetailsOpen"
+                      class="menu-item"
+                      data-content="order-details">Order Details</span>
+                  </div>
+
+                  <div class="top-your-order">
+                    <span>Processing</span>
+                    <span>Cancel / Modify</span>
+                  </div>
+
+                  <div class="text-your-order">
+                    <span>Order #</span>
+                    <span>30004</span>
+                  </div>
+
+                  <div class="text-your-order">
+                    <span>Order Total</span>
+                    <span>$324.96</span>
+                  </div>
+
+                  <p>Also in this order</p>
+                </div>
+
+                <div class="addition">
+                  <div class="product-box-small">
+                    <img src="assets/product-1/addition-1.png" alt="addition-1"/>
+                  </div>
+                  <div class="product-box-small">
+                    <img src="assets/product-1/addition-3.png" alt="addition-3"/>
+                  </div>
+                  <div class="product-box-small">
+                    <img src="assets/product-1/addition-4.png" alt="addition-4" />
+                  </div>
+                  <div class="product-box-small">
+                    <span>+3</span>
+                    <span>more</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Order details -->
+          <div class="content order-details hidden">
+            <div class="columns-order-details">
+              <div class="first-col">
+                <div>Your Orders/Order #30002</div>
+                <h1>Order</h1>
+                <h1>Details</h1>
+
+                <div>Billing</div>
+                <div>Shipping</div>
+              </div>
+
+              <div class="second-col">
+                <div class="box-one">
+                  <div>Rally Interactive</div>
+                  <div>244 W 300 N</div>
+                  <div>Salt Lake City, Utah 84103</div>
+                  <div>United States</div>
+                  <div>(801) 643-3595</div>
+                </div>
+
+                <div class="box-two">
+                  <div>Rally Interactive</div>
+                  <div>244 W 300 N</div>
+                  <div>Salt Lake City, Utah 84103</div>
+                  <div>United States</div>
+                  <div>(801) 643-3595</div>
+                </div>
+              </div>
+
+              <div class="three-col">
+                <div
+                  id="orderDetailsClose"
+                  class="menu-item"
+                  data-content="your-orders-container">
+                  <h3>Order</h3>
+                  <h3>Cancelled</h3>
+                </div>
+
+                <div class="box">
+                  <div>Payment Status:</div>
+                  <div>Refunded</div>
+                </div>
+
+                <div class="box">
+                  <div>Payment Status:</div>
+                  <div>Unfulfilled</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reward status -->
+          <div class="content reward-status-container hidden">
+            <div class="title-reward-account-payment">
+              <h1>Reward</h1>
+              <h1>Status</h1>
+            </div>
+            <div class="reward-status-wrapper">
+              <div class="activity-wrapper">
+                <div class="row-one">
+                  <h2>Activity</h2>
+                  <div class="text-reward">
+                    <div>VIP</div>
+                    <div>Current Status</div>
+                  </div>
+                  <div class="text-reward">
+                    <div>GOLD</div>
+                    <div>Next Tier</div>
+                  </div>
+                </div>
+
+                <div class="row-two">
+                  <div class="text-reward">
+                    <div>$ 678.42</div>
+                    <div>Lifetime Spend</div>
+                  </div>
+                  <div class="text-reward">
+                    <div>$ 321.68</div>
+                    <div>To Gold Status</div>
+                  </div>
+                </div>
+
+                <div class="row-three">
+                  <div class="text-reward">
+                    <div>003</div>
+                    <div>Orders</div>
+                  </div>
+                  <div class="text-reward">
+                    <div>007</div>
+                    <div>Referrals</div>
+                  </div>
+                </div>
+
+                <div class="benefits-wrapper">
+                  <h2>Benefits</h2>
+                  <div class="benefits-img">
+                    <img src="assets/icon-recurrent.png" alt="icon-recurrent" />
+                  </div>
+                  <div class="benefits-img">
+                    <img src="assets/icon-savings.png" alt="icon-savings" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Account settings -->
+          <div class="content account-settings-container hidden">
+            <div class="title-reward-account-payment">
+              <h1>Account</h1>
+              <h1>Settings</h1>
+            </div>
+            <div class="account-settings-wrapper">
+
+              <form>
+                <h2>Account</h2>
+                <div class="forms-wrapper">
+                  <input required class="input-validation" type="text" value="Ben Cline" id="nameInput"/>
+                  <input required class="input-validation" type="phone" value="+1 801 641 09" id="numberInput"/>
+                  <input required class="input-validation" type="email" value="ben@rallyinteractive.com" id="emailInput"/>
+                  <input required class="input-validation" type="password" value="*************" id="passwordInput"/>
+                  <button type="button">Save changes</button>
+                </div>
+
+                <h2>Addresses</h2>
+                <div class="addresses">
+                  <div class="box-address">
+                    <span>Ben Cline</span>
+                    <span>1234 S. Flestwood Mac Dr</span>
+                    <span>Salt Lake City, UT B4109</span>
+                    <span>Unites States</span>
+                    <span>+1 801 641 09</span>
+                  </div>
+                  <div class="box-address">
+                    <span>Ben Cline</span>
+                    <span>C/O Rally Interactive</span>
+                    <span>Salt Lake City, UT B4109</span>
+                    <span>Unites States</span>
+                    <span>+1 801 641 09</span>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Payment methods -->
+          <div class="content payment-methods-container hidden">
+            <div class="title-reward-account-payment">
+              <h1>Payment</h1>
+              <h1>Methods</h1>
+            </div>
+            <div class="cards">
+              <div class="card-row">
+                <img src="assets/card-1.png" alt="card-1" />
+              </div>
+              <div class="card-row">
+                <img src="assets/card-2.png" alt="card-2" />
+              </div>
+              <div class="card-row">
+                <img src="assets/card-3.png" alt="card-3" />
+              </div>
+              <div class="card-row">
+                <div class="img-card">
+                  <img src="assets/icon-plus.png" alt="icon-plus" />
+                </div>
+                <div>AND CARD</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="resources/main.js"></script>
+  </body>
+</html>
