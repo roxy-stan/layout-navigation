@@ -1,13 +1,14 @@
-document.addEventListener("DOMContentLoaded", function (event) {
-  const menuItems = document.getElementsByClassName("menu-item");
+$(function(event)  {
+  const menuItems = $(".menu-item");
   console.log('menuItems', menuItems)
-  const boundary = document.getElementsByClassName("title-aside")[0];
-  const menuTop = document.getElementsByClassName("menu-top")[0];
+  const boundary = $(".title-aside")[0];
+  const menuTop = $(".menu-top")[0];
 
   for (let i = 0; i < menuItems.length; i++) {
     const menuItem = menuItems[i];
 
-    menuItem.addEventListener("click", function () {
+    menuItem.addEventListener("click", function () 
+    {
       for (let j = 0; j < menuItems.length; j++) {
         menuItems[j].classList.remove("selected");
       }
@@ -16,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
       const dataContent = menuItem.dataset.content;
       console.log('dataContent', dataContent)
-      const contentElements = document.getElementsByClassName("content");
+      const contentElements = $(".content");
       for (let k = 0; k < contentElements.length; k++) {
         contentElements[k].classList.add("hidden");
       }
