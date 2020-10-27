@@ -4,9 +4,9 @@ $(function(event)  {
   // nu mai ai nevoie sa iei elementul din pozitia 0, jQuery face asta pentru tine
   //const boundary = $(".title-aside")[0];
   //poti sa verifici cu incredere ca functioneaza perfect ok
-  const boundary = $(".title-aside");
+  const boundary = $(".title-aside")[0];
   // la fel ca mai sus
-  const menuTop = $(".menu-top");
+  const menuTop = $(".menu-top")[0];
 
   for (let i = 0; i < menuItems.length; i++) {
     const menuItem = menuItems[i];
