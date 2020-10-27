@@ -6,7 +6,7 @@ $(function(event)  {
   //poti sa verifici cu incredere ca functioneaza perfect ok
   const boundary = $(".title-aside");
   // la fel ca mai sus
-  const menuTop = $(".menu-top")[0];
+  const menuTop = $(".menu-top");
 
   for (let i = 0; i < menuItems.length; i++) {
     const menuItem = menuItems[i];
