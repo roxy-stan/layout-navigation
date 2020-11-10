@@ -1,45 +1,32 @@
-$(function(event)  {
+$(function()  {
   const menuItems = $(".menu-item");
   console.log('menuItems', menuItems)
-  // nu mai ai nevoie sa iei elementul din pozitia 0, jQuery face asta pentru tine
-  //const boundary = $(".title-aside")[0];
-  //poti sa verifici cu incredere ca functioneaza perfect ok
-  const boundary = $(".title-aside")[0];
-  // la fel ca mai sus
-  const menuTop = $(".menu-top")[0];
-
-  for (let i = 0; i < menuItems.length; i++) {
-    const menuItem = menuItems[i];
-
-    menuItem.addEventListener("click", function () 
-    {
-      for (let j = 0; j < menuItems.length; j++) {
-        menuItems[j].classList.remove("selected");
-      }
-      menuItem.classList.add("selected");
+  const boundary = $(".title-aside");
+  const menuTop = $(".menu-top");
 
 
-      const dataContent = menuItem.dataset.content;
-      console.log('dataContent', dataContent)
-      const contentElements = $(".content");
-      for (let k = 0; k < contentElements.length; k++) {
-        contentElements[k].classList.add("hidden");
-      }
+  menuItems.on("click", function() {
+    menuItems.removeClass("selected");
+    $(this).addClass("selected");
 
-      const elements = document.getElementsByClassName(dataContent);
-      for (let n = 0; n < elements.length; n++) {
-        elements[n].classList.remove("hidden");
-      }
-
-
-      //showing boundary and top menu when page is not home page (your-orders)
-      if (dataContent !== "your-orders-container") {
-        boundary.classList.remove("hidden");
-        menuTop.classList.remove("hidden");
-      } else {
-        boundary.classList.add("hidden");
-        menuTop.classList.add("hidden");
-      }
+    const contentElements = $(".content");
+    const dataContent=$(this).data("content");
+    contentElements.addClass("hidden");
+    contentElements.each(function (index, elem){
+      if ($(elem).hasClass(dataContent)){
+        $(elem).removeClass("hidden");
+      } 
+      console.log($(elem).hasClass(dataContent));
     });
-  }
+    
+    // contentElements.filter(`.${dataContent}`).removeClass("hidden");
+
+    if (dataContent !== "your-orders-container") {
+      boundary.removeClass("hidden");
+      menuTop.removeClass("hidden");
+  } else {
+      boundary.addClass("hidden");
+      menuTop.addClass("hidden");
+  }  
+  });
 });
